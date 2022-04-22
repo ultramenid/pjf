@@ -101,8 +101,8 @@
 
     <div class="max-w-5xl mx-auto" x-data="{sidenav:'ikhtisar'}">
         <img src="img/DJI_0823.jpeg" alt="" class="sm:mt-12 mt-0 h-100 w-full object-cover object-top" >
-        <div class="flex justify-between space-x-10">
-            <div class="w-3/12 flex flex-col mt-6">
+        <div class="flex sm:flex-row flex-col justify-between sm:space-x-10 space-x-0 px-4">
+            <div class="sm:w-3/12 w-full flex flex-col mt-6">
                 <div  :class="(sidenav == 'ikhtisar') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'" @click="sidenav = 'ikhtisar' " >
                     <a class="cursor-pointer  font-bold text-xl">Ikhtisar</a>
                 </div>
@@ -110,7 +110,7 @@
                     <a class="cursor-pointer  font-bold text-xl">Daftar Liputan</a>
                 </div>
             </div>
-            <div class="w-9/12 mt-6 font-light">
+            <div class="sm:w-9/12 w-full mt-6 font-light">
                 <div x-show="sidenav==='ikhtisar'">
                     <p>Pada 8 Januari 2016 Peraturan Presiden No. 3 Tahun 2016 tentang <a href="https://kppip.go.id/download/peraturan/keppres/Perpres-No.-3-tahun-2016-Compressed.pdf" class="text-pasopati-red">Percepatan Pelaksanaan Proyek Strategis Nasional</a> (PSN) yang berisi 225 proyek spesifik plus proyek kelistrikan yang daftarnya akan ditambahkan peraturan presiden tersendiri. Besarnya cakupan pun ketersediaan anggaran menjadi salah satu alasan bahwa tidak semua proyek ini dilaksanakan sekaligus.</p>
                     <p class="mt-4">
