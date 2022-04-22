@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="pasopati.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body x-data="{nav:false}" class="font-sans">
+    <!-- header -->
+    <header class="shadow">
+        <div class="flex justify-between items-center  max-w-5xl mx-auto " >
+            <img src="logo_pasopati.png" alt="pasopati project" class="sm:h-7 h-4 px-4">
+            <div class="flex justify-between items-center space-x-4 ">
+                <div class="sm:flex hidden relative items-center border border-gray-400 ">
+                    <input type="text" class="px-4 py-2 text-sm focus:outline-none " placeholder="Pencarian ...">
+                    <div class=" bg-white z-10 absolute right-2 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-pasopati-green" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="sm:flex hidden space-x-1 ">
+                    <a href="#" class="text-sm text-pasopati-green">EN</a>
+                    <span class="border-l border-pasopati-green"></span>
+                    <a href="#" class="text-sm text-pasopati-green">ID</a>
+                </div>
+                <div class="bg-pasopati-green text-white py-5 px-4 relative" >
+                    <svg @click = "nav=true"  xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- sidebar nav -->
+    <div class="fixed sm:w-3/12 w-7/12 h-screen  bg-pasopati-green shadow-md right-0 top-0 overflow-y-auto z-20" x-show="nav"
+        x-transition:enter="transition ease-in-out duration-150"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition ease-in-out duration-150"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        @click.outside="nav = false"
+        x-cloak style="display: none !important">
+        <button class="absolute px-9 py-6 focus:outline-none text-white" @click="nav = false">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 " fill="white" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <div class="mt-20 space-y-3">
+            <div class=" px-6" >
+                <div class="flex items-center   px-4 mb-1" >
+                    <a class=" text-base leading-5 text-white font-semibold uppercase">EXPOSE </a>
+                </div>
+                <div class=" px-4 py-3 mb-4  rounded" >
+                    <ul class="list-disc flex flex-col space-y-2 list-inside">
+                        <li class="text-pasopati-red"><a href="#" class="text-sm mr-6 text-white">Deforestasi</a></li>
+                        <li class="text-pasopati-red"><a href="#" class="text-sm mr-6 text-white">Kebakaran</a></li>
+                        <li class="text-pasopati-red"><a href="#" class="text-sm mr-6 text-white">Pulp & Paper</a></li>
+                        <li class="text-pasopati-red"><a href="#" class="text-sm mr-6 text-white">Mining & Energy</a></li>
+                    </ul>
+                </div>
+                <p class="border-b border-gray-300"></p>
+            </div>
+            <div class=" px-6" >
+                <div class="flex items-center   px-4 mb-1" >
+                    <a class=" text-base leading-5 text-white font-semibold uppercase">FELLOWSHIP </a>
+                </div>
+                <div class=" px-4 py-3 mb-4  rounded" >
+                    <ul class="list-disc flex flex-col space-y-2 list-inside">
+                        <li class="text-pasopati-red"><a href="#" class="text-sm mr-6 text-white">PJF2020</a></li>
+                    </ul>
+                </div>
+                <p class="border-b border-gray-300"></p>
+            </div>
+            <div class=" px-6" >
+                <div class="flex items-center   px-4 mb-1" >
+                    <a class=" text-base leading-5 text-white font-semibold uppercase">SAWIT </a>
+                </div>
+                <div class=" px-4 py-3 mb-4  rounded" >
+                    <ul class="list-disc flex flex-col space-y-2 list-inside">
+                        <li class="text-pasopati-red"><a href="#" class="text-sm mr-6 text-white">CBI</a></li>
+                        <li class="text-pasopati-red"><a href="#" class="text-sm mr-6 text-white">ANJ</a></li>
+                    </ul>
+                </div>
+                <p class="border-b border-gray-300"></p>
+            </div>
+            
+            <div class="px-6 flex space-x-2 text-white text-sm  bottom-10 fixed z-30">
+            
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto" x-data="{sidenav:'latar'}">
+        <img src="https://pasopati.id/uploads/artikel/1632649026_61503f423590b.jpeg" alt="" class="sm:mt-12 mt-0">
+        <div class="flex justify-between space-x-10">
+            <div class="w-3/12 flex flex-col mt-6">
+                <div  :class="(sidenav == 'latar') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'" @click="sidenav = 'latar' " >
+                    <a class="cursor-pointer  font-bold text-xl">Latar Belakang</a>
+                </div>
+                <div  :class="(sidenav == 'kepesertaan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'kepesertaan'">
+                    <a class="cursor-pointer  font-bold text-xl">Kepesertaan</a>
+                </div>
+                <div  :class="(sidenav == 'kegiatan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'kegiatan'">
+                    <a class="cursor-pointer  font-bold text-xl">Kegiatan</a>
+                </div>
+                <div  :class="(sidenav == 'hibahliputan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'hibahliputan'">
+                    <a class="cursor-pointer  font-bold text-xl">Hibah Liputan</a>
+                </div>
+                <div  :class="(sidenav == 'mentor') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'mentor'">
+                    <a class="cursor-pointer  font-bold text-xl">Mentor</a>
+                </div>
+            </div>
+            <div class="w-9/12 mt-6 font-light">
+                <div x-show="sidenav==='latar'">
+                    Latar
+                </div>
+                <div x-show="sidenav==='kepesertaan'">
+                   kepesertaan
+                </div>
+                <div x-show="sidenav==='kegiatan'">
+                    kegiatan
+                </div>
+                <div x-show="sidenav==='hibahliputan'">
+                    hiba liputan 
+                </div>
+                <div x-show="sidenav==='mentor'">
+                   Mentor
+                </div>
+            </div>
+        </div>
+
+    </div>  
+
+
+     <!-- footer -->
+     <div class="bg-gray-100 flex flex-col items-center justify-center py-10 mt-12">
+        <div class="max-w-3xl mx-auto flex flex-col space-y-4 font-light px-4">
+            <p class="text-center">Pasopati Project dirancang sebagai sebuah situs yang menampilkan informasi, data, dan analisis isu-isu kehutanan, persawitan, dan pertambangan. Situs ini fokus menyampaikan suara kritis pada tema-tema tersebut di atas, termasuk mengenai pelakunya dan kebijakan-kebijakan terkait.</p>
+            <p class="text-center">Pasopati Project didedikasikan untuk mencapai salah satu tujuan Auriga, yakni mengeliminir aksi-aksi destruktif terhadap sumberdaya alam.</p>
+            <p class="text-center">Situs ini dikelola oleh Auriga. Namun demikian ekspose-ekspose tertentu dalam situs ini dilakukan bersama jejaring.</p>
+        </div>
+    </div>
+    <div class="bg-black py-6">
+        <div class="max-w-5xl mx-auto flex sm:flex-row flex-col justify-between items-center">
+            <div class=" text-white py-6">
+                <p>&copy; AURIGA NUSANTARA. ALL RIGHT RESERVED.</p>
+            </div>
+            <div class="flex space-x-4">
+                <a href="https://twitter.com/AURIGA_ID"><img loading="lazy" src="twitter.svg" alt="" class="h-4 "></a>
+                <a href="https://www.facebook.com/nusantaraauriga/"><img loading="lazy" src="facebook.svg" alt="" class="h-4"></a>
+                <a href="https://www.instagram.com/auriga_id/"><img loading="lazy" src="ig.png" alt="" class="h-4"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="pasopati.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body x-data="{nav:false}" class="font-sans">
+    <!-- header -->
+    <header class="shadow">
+        <div class="flex justify-between items-center  max-w-5xl mx-auto " >
+            <img src="logo_pasopati.png" alt="pasopati project" class="sm:h-7 h-4 px-4">
+            <div class="flex justify-between items-center space-x-4 ">
+                <div class="sm:flex hidden relative items-center border border-gray-400 ">
+                    <input type="text" class="px-4 py-2 text-sm focus:outline-none " placeholder="Pencarian ...">
+                    <div class=" bg-white z-10 absolute right-2 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-pasopati-green" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="sm:flex hidden space-x-1 ">
+                    <a href="#" class="text-sm text-pasopati-green">EN</a>
+                    <span class="border-l border-pasopati-green"></span>
+                    <a href="#" class="text-sm text-pasopati-green">ID</a>
+                </div>
+                <div class="bg-pasopati-green text-white py-5 px-4 relative" >
+                    <svg @click = "nav=true"  xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- sidebar nav -->
+    <div class="fixed sm:w-3/12 w-7/12 h-screen  bg-pasopati-green shadow-md right-0 top-0 overflow-y-auto z-20" x-show="nav"
+        x-transition:enter="transition ease-in-out duration-150"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition ease-in-out duration-150"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        @click.outside="nav = false"
+        x-cloak style="display: none !important">
+        <button class="absolute px-9 py-6 focus:outline-none text-white" @click="nav = false">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 " fill="white" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <div class="mt-20 space-y-3">
+            <div class=" px-6" >
+                <div class="flex items-center   px-4 mb-1" >
+                    <a class=" text-base leading-5 text-white font-semibold uppercase">EXPOSE </a>
+                </div>
+                <div class=" px-4 py-3 mb-4  rounded" >
+                    <ul class="list-disc flex flex-col space-y-2 list-inside">
+                        <li class="text-pasopati-red"><a href="#" class="text-sm mr-6 text-white">Deforestasi</a></li>
+                        <li class="text-pasopati-red"><a href="#" class="text-sm mr-6 text-white">Kebakaran</a></li>
+                        <li class="text-pasopati-red"><a href="#" class="text-sm mr-6 text-white">Pulp & Paper</a></li>
+                        <li class="text-pasopati-red"><a href="#" class="text-sm mr-6 text-white">Mining & Energy</a></li>
+                    </ul>
+                </div>
+                <p class="border-b border-gray-300"></p>
+            </div>
+            <div class=" px-6" >
+                <div class="flex items-center   px-4 mb-1" >
+                    <a class=" text-base leading-5 text-white font-semibold uppercase">FELLOWSHIP </a>
+                </div>
+                <div class=" px-4 py-3 mb-4  rounded" >
+                    <ul class="list-disc flex flex-col space-y-2 list-inside">
+                        <li class="text-pasopati-red"><a href="#" class="text-sm mr-6 text-white">PJF2020</a></li>
+                    </ul>
+                </div>
+                <p class="border-b border-gray-300"></p>
+            </div>
+            <div class=" px-6" >
+                <div class="flex items-center   px-4 mb-1" >
+                    <a class=" text-base leading-5 text-white font-semibold uppercase">SAWIT </a>
+                </div>
+                <div class=" px-4 py-3 mb-4  rounded" >
+                    <ul class="list-disc flex flex-col space-y-2 list-inside">
+                        <li class="text-pasopati-red"><a href="#" class="text-sm mr-6 text-white">CBI</a></li>
+                        <li class="text-pasopati-red"><a href="#" class="text-sm mr-6 text-white">ANJ</a></li>
+                    </ul>
+                </div>
+                <p class="border-b border-gray-300"></p>
+            </div>
+            
+            <div class="px-6 flex space-x-2 text-white text-sm  bottom-10 fixed z-30">
+            
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto" x-data="{sidenav:'ikhtisar'}">
+        <img src="img/DJI_0823.jpeg" alt="" class="sm:mt-12 mt-0 h-100 w-full object-cover object-top" >
+        <div class="flex justify-between space-x-10">
+            <div class="w-3/12 flex flex-col mt-6">
+                <div  :class="(sidenav == 'ikhtisar') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'" @click="sidenav = 'ikhtisar' " >
+                    <a class="cursor-pointer  font-bold text-xl">Ikhtisar</a>
+                </div>
+                <div  :class="(sidenav == 'daftarliputan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'daftarliputan'">
+                    <a class="cursor-pointer  font-bold text-xl">Daftar Liputan</a>
+                </div>
+            </div>
+            <div class="w-9/12 mt-6 font-light">
+                <div x-show="sidenav==='ikhtisar'">
+                    <p>Pada 8 Januari 2016 Peraturan Presiden No. 3 Tahun 2016 tentang <a href="https://kppip.go.id/download/peraturan/keppres/Perpres-No.-3-tahun-2016-Compressed.pdf" class="text-pasopati-red">Percepatan Pelaksanaan Proyek Strategis Nasional</a> (PSN) yang berisi 225 proyek spesifik plus proyek kelistrikan yang daftarnya akan ditambahkan peraturan presiden tersendiri. Besarnya cakupan pun ketersediaan anggaran menjadi salah satu alasan bahwa tidak semua proyek ini dilaksanakan sekaligus.</p>
+                    <p class="mt-4">
+                        Pada 29 Mei 2020 Kementerian Koordinator Bidang Perekonomian mengumumkan <a href="https://auriga.or.id/resource/reference/89-proyek-strategis-nasional-rekomendasi-kemenko-ekonomi.pdf" class="text-pasopati-red">89 PSN yang direkomendasikan pada 2020 – 2024 </a>, dengan total investasi Rp 1.422 triliun. Sebanyak 56 proyek ini merupakan usulan baru, 10 proyek merupakan proyek existing yang memerlukan perubahan ruang lingkup, 15 proyek dapat dikelompokkan dalam satu program baru, dan 8 proyek ketenagalistrikan. Per sektor pembangunan, PSN paling banyak adalah pembangunan jalan dan jembatan, bendungan dan irigasi, energi, dan kawasan perbatasan.
+                    </p>
+                    <p class="mt-4">
+                        Pemerintah juga mengeluarkan kebijakan yang bertujuan untuk menyelamatkan sektor-sektor yang terdampak pandemi Covid-19. Peraturan Pemerintah Nomor 23/2020 tentang Pelaksanaan Program <a href="https://sipuu.setkab.go.id/PUUdoc/176110/PP_Nomor_23_Tahun_2020.pdf" class="text-pasopati-red"> Pemulihan Ekonomi Nasional (PEN)</a>, sekitar <a href="https://www.kemenkeu.go.id/publikasi/berita/pemerintah-siapkan-total-rp641-17-triliun-untuk-pemulihan-ekonomi-nasional/" class="text-pasopati-red">Rp 641,17 triliun</a>, ini berupa program penyertaan modal negara (PMN), penempatan dana, investasi pemerintah, dan penjaminan. PMN diberikan untuk untuk memperbaiki struktur permodalan baik BUMN atau anak usaha yang terdampak pandemi. Selain penyertaan modal, penempatan dana pemerintah juga dilakukan sebagai dukungan likuiditas perbankan yang melakukan rerstrukturisasi kredit atau tambahan kredit.
+                    </p>
+                    <p class="mt-4">
+                        Berbagai upaya pemerintah untuk memberikan stimulus dan menjaga stabilitas perekonomian nasional melalui PSN dan PEN itu perlu diapresiasi. Kemendesakan situasi pandemi tentu perlu direspon dengan cara-cara luar biasa, baik secara skala maupun kecepatan respon. Proyek-proyek strategis pun tentu diperlukan untuk pemerataan pembangunan yang selama ini mengedepankan Jawa dan Indonesia Bagian Barat.
+                    </p>
+                    <img class="mt-4 w-full" src="https://pasopati.id/ckfinder/userfiles/images/DJI_0013.JPG" alt="">
+                    <p class="mt-4">Namun demikian, membiarkan kedua hal itu tanpa pemantauan bisa jadi bukan hal yang tepat. Besarnya anggaran keduanya, juga luasnya cakupan dan sebarannya, akan akan menjadi tantangan tersendiri, baik menjaga kualitas maupun memastikan keseseuaian pelaksanaannya. Khusus PEN, Inspektur Jenderal Kementerian Keuangan menyebut bahwa program PEN yang cenderung lintas sektor juga menyebabkan <a href="https://news.ddtc.co.id/soal-program-pen-wamenkeu-realisasi-anggaran-harus-tepat-sasaran-24314" class="text-pasopati-red"> pengawalan anggaran PEN tidak bisa dilakukan secara individual</a>, mengharuskan adanya sinergi antara Aparat Pengawasan Intern Pemerintah (APIP), Satuan Pengawasan Internal (SPI), dan aparat penegak hukum.
+                    </p>
+                    <p class="mt-4">
+                        Kasus <a href="https://www.kpk.go.id/id/berita/siaran-pers/970-kpk-tahan-direktur-utama-pt-pln-persero-non-aktif" class="text-pasopati-red"> korupsi yang terjadi pada proyek pembangunan PLTU Riau-1</a> menjadi bukti empirik perlunya pemantauan agar penyalahgunaan tidak terjadi. Pemantauan ini juga diperlukan untuk mencegah kerusakan sumberdaya alam hayati dan lingkungan hidup, pun memastikan penghormatan terhadap hak asasi manusia.
+                    </p>
+                    <p class="mt-4">
+                        Pengalaman <a href="https://auriga.or.id/" class="text-pasopati-red">Auriga Nusantara</a> pada 5 tahun terakhir menunjukan, menjaga sumber daya alam ternyata bukan kerja soliter. Tidak dapat dilakukan sendirian mengingat lebarnya bentang wilayah yang lebar dan beragamnya karakteristik permasalahan. Kolaborasi pun menjadi kata kunci. Oleh karena itulah Auriga senantiasa berupaya berkoalisi, termasuk dengan media massa sebagaimana melalui <a href="https://tempo-institute.org/program-khusus/investigasi-bersama-tempo/" class="text-pasopati-red">Investigasi Bersama Tempo</a> sejak 2016, <a href="https://www.indonesialeaks.id/index.html#about-us" class="text-pasopati-red">IndonesiaLeaks</a> sejak 2018, dan lain sebagainya.
+                    </p>
+                    <p class="mt-4 relative">
+                        Atas alas-alas itu, Auriga menggagas inisiatif bernama Pasopati Journalism Fellowship (PJF). Program ini sekaligus menjadi pilot project untuk memasukkan aspek keberlanjutan inisiatif pemantauan. PJF merupakan rangkaian kegiatan fellowship yang memiliki tiga tujuan utama. Pertama, meningkatkan kapasitas jurnalis dalam mendorong liputan berkualitas. Kedua, mendorong kehadiran kerjasama kolaboratif yang mempertemukan peran mass communication sebuah media dan fungsi information provider plus knowledge organisasi masyarakat sipil (civil society organisation - CSO). Ketiga, memperkuat impact liputan media demi menghadirkan pembaharuan kebijakan pengelolaan sumberdaya alam. <span class="ml-2 absolute bg-pasopati-red h-2 w-2  mt-2">&nbsp;</span>
+                    </p>
+                </div>
+                <div x-show="sidenav==='daftarliputan'">
+                    <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 items-center">
+                        <img src="https://images-tm.tempo.co/all/2021/02/06/763682/763682_1200.jpg" alt="" class="h-40 w-72 bg-cover bg-center">
+                        <div class="flex flex-col space-y-1">
+                            <a href="detail2022.html"><h1 class="text-2xl font-extrabold">Hilang Rimba Burung Surga</h1></a>
+                            <p class="mt-1 font-light text-sm">Pembangunan smelter dan tambang nikel di Weda Tengah, Halmahera Tengah, Maluku Utara, mengancam populasi burung endemik yang dilindungi. Hutan primer di wilayah konsesi pertambangan masih dipenuhi pohon berdiameter besar. Liputan ini hasil kerja sama Tempo dengan fellowship Pasopati Project 2020.</p>
+                            <a href="https://majalah.tempo.co/read/lingkungan/162480/bagaimana-tambang-nikel-dan-smelter-mengancam-populasi-burung-endemik-di-halmahera-tengah" class="text-pasopati-red">Majalah Tempo</a>
+                        </div>
+                    </div>
+
+                    <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 mt-8 items-center">
+                        <img src="https://www.mongabay.co.id/wp-content/uploads/2021/02/1B-1.jpg" alt="" class="h-40 w-72 bg-cover bg-center">
+                        <div class="flex flex-col space-y-1">
+                            <a href="detail2022.html"><h1 class="text-2xl font-extrabold">Kala Tambang dan Pabrik Semen Masuk Manggarai Timur [1]
+                            </h1></a>
+                            <p class="mt-1 font-light text-sm">Perusahaan tambang dan pabrik semen berencana masuk ke Desa Satar Punda, Kecamatan Lamba Leda, Manggarai Timur, Nusa Tenggara Timur.Terjadi pro kontra di masyarakat. Lahan pertanian dan sumber pangan masyarakat lokal terancam oleh pabrik semen.</p>
+                            <a href="https://www.mongabay.co.id/2021/02/06/kala-tambang-dan-pabrik-semen-bakal-masuk-manggarai-timur-1/" class="text-pasopati-red">Mongabay</a>
+                        </div>
+                    </div>
+
+                    <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 mt-8 items-center">
+                        <img src="img/pasopati-2.png" alt="" class="h-48 w-72 bg-cover bg-center">
+                        <div class="flex flex-col space-y-1">
+                            <a href="detail2022.html"><h1 class="text-2xl font-extrabold">Kala Tambang dan Pabrik Semen Masuk Manggarai Timur [2]
+                            </h1></a>
+                            <p class="mt-1 font-light text-sm">Perkampungan warga terancam tergusur oleh kehadiran tambang batu gamping yang jadi bahan baku pembuatan semen. Ditengarai area tambang dan pabrik semen bukan wilayah industri dalam Perda RTRW Manggarai Timur bukan masuk kawasan industri. Walhi NTT telah mengajukan keberatan pada sidang amdal.</p>
+                            <a href="https://www.mongabay.co.id/2021/02/10/ketika-tambang-masuk-manggarai-timur-rusak-kehidupan-sosial-sampai-ancaman-budaya-tercerabut-2/" class="text-pasopati-red">Mongabay</a>
+                        </div>
+                    </div>
+
+                    <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 mt-8 items-center">
+                        <img src="https://www.mongabay.co.id/wp-content/uploads/2021/02/5-11.jpg" alt="" class="h-48 w-72 bg-cover bg-center">
+                        <div class="flex flex-col space-y-1">
+                            <a href="detail2022.html"><h1 class="text-2xl font-extrabold">Tambang Batu Gamping di Satar Punda Berisiko Rusak Sumber Air
+                            </h1></a>
+                            <p class="mt-1 font-light text-sm">Perkampungan warga terancam tergusur oleh kehadiran tambang batu gamping yang jadi bahan baku pembuatan semen. Ditengarai area tambang dan pabrik semen bukan wilayah industri dalam Perda RTRW Manggarai Timur bukan masuk kawasan industri. Walhi NTT telah mengajukan keberatan pada sidang amdal.</p>
+                            <a href="https://www.mongabay.co.id/2021/02/18/tambang-batu-gamping-di-satar-punda-berisiko-rusak-sumber-air/" class="text-pasopati-red">Mongabay</a>
+                        </div>
+                    </div>
+
+                    <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 mt-8 items-center">
+                        <img src="https://www.mongabay.co.id/wp-content/uploads/2021/02/3-12.jpg" alt="" class="h-48 w-72 bg-cover bg-center">
+                        <div class="flex flex-col space-y-1">
+                            <a href="detail2022.html"><h1 class="text-2xl font-extrabold">Belajar dari Kehadiran Tambang Mangan di Satar Punda
+                            </h1></a>
+                            <p class="mt-1 font-light text-sm">Perkampungan warga terancam tergusur oleh kehadiran tambang batu gamping yang jadi bahan baku pembuatan semen. Ditengarai area tambang dan pabrik semen bukan wilayah industri dalam Perda RTRW Manggarai Timur bukan masuk kawasan industri. Walhi NTT telah mengajukan keberatan pada sidang amdal.</p>
+                            <a href="https://www.mongabay.co.id/2021/02/27/belajar-dari-kehadiran-tambang-mangan-di-satar-punda/" class="text-pasopati-red">Mongabay</a>
+                        </div>
+                    </div>
+
+                    <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 mt-8 items-center">
+                        <img src="https://www.mongabay.co.id/wp-content/uploads/2021/03/5-12.jpg" alt="" class="h-48 w-72 bg-cover bg-center">
+                        <div class="flex flex-col space-y-1">
+                            <a href="detail2022.html"><h1 class="text-2xl font-extrabold">Pertanian dan Peternakan Hidupi Warga Satar Punda, Mengapa Harus Ada Tambang?
+                            </h1></a>
+                            <p class="mt-1 font-light text-sm">Perkampungan warga terancam tergusur oleh kehadiran tambang batu gamping yang jadi bahan baku pembuatan semen. Ditengarai area tambang dan pabrik semen bukan wilayah industri dalam Perda RTRW Manggarai Timur bukan masuk kawasan industri. Walhi NTT telah mengajukan keberatan pada sidang amdal.</p>
+                            <a href="https://www.mongabay.co.id/2021/03/11/pertanian-dan-peternakan-hidupi-warga-satar-punda-mengapa-harus-ada-tambang/" class="text-pasopati-red">Mongabay</a>
+                        </div>
+                    </div>
+
+                    <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 mt-8 items-center">
+                        <img src="img/seratid.png" alt="" class="h-48 w-72 bg-cover bg-center">
+
+                        <div class="flex flex-col space-y-1">
+                            <a href="detail2022.html"><h1 class="text-2xl font-extrabold">Di Balik Keramaian Yang Tak Menguntungkan Petani dan Nelayan
+                            </h1></a>
+                            <p class="mt-1 font-light text-sm">Kampung Ujungnegoro berubah ramai dibanding sebelum ada pembangkit listrik tenaga uap yang didanani oleh Japan Bank for International Cooperation (JBIC) dengan nilai proyek sebesar Rp62 triliun oleh konsorsium PT Bhimasena Power Indonesia (BPI) bersama J-Power, Itochu dan Adaro.</p>
+                            <a href="https://serat.id/2021/03/11/di-balik-keramaian-yang-tak-menguntungkan-petani-dan-nelayan/" class="text-pasopati-red">Serat.id</a>
+                        </div>
+                    </div>
+
+                    <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 mt-8 items-center">
+                        <img src="img/serat2.jpeg" alt="" class="h-52 w-72 bg-cover bg-center">
+                        <div class="flex flex-col space-y-1">
+                            <a href="detail2022.html"><h1 class="text-2xl font-extrabold">Tak Hanya Kehilangan Lahan, Juga Derita Bui
+                            </h1></a>
+                            <p class="mt-1 font-light text-sm">Sejumlah petani pemilik lahan dituduh melakukan penyanderaan, pengeroyokan, pencurian, pemerasan, perusakan barang hingga perbuatan tidak menyenangkan.
+                            </p>
+                            <a href="https://serat.id/2021/03/11/tak-hanya-kehilangan-lahan-juga-derita-bui/" class="text-pasopati-red">Serat.id</a>
+                        </div>
+                    </div>
+
+                    <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 mt-8 items-center">
+                        <img src="img/serat2.jpeg" alt="" class="h-52 w-72 bg-cover bg-center">
+                        <div class="flex flex-col space-y-1">
+                            <a href="detail2022.html"><h1 class="text-2xl font-extrabold">Meretakkan Hubungan Kekerabatan
+                            </h1></a>
+                            <p class="mt-1 font-light text-sm">Berbalik sikap karena bujukan seorang  yang masih satu kampung dengan iming-iming uang.
+                            </p>
+                            <a href="https://serat.id/2021/03/11/meretakkan-hubungan-kekerebatan/" class="text-pasopati-red">Serat.id</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>  
+
+
+     <!-- footer -->
+     <div class="bg-gray-100 flex flex-col items-center justify-center py-10 mt-12">
+        <div class="max-w-3xl mx-auto flex flex-col space-y-4 font-light px-4">
+            <p class="text-center">Pasopati Project dirancang sebagai sebuah situs yang menampilkan informasi, data, dan analisis isu-isu kehutanan, persawitan, dan pertambangan. Situs ini fokus menyampaikan suara kritis pada tema-tema tersebut di atas, termasuk mengenai pelakunya dan kebijakan-kebijakan terkait.</p>
+            <p class="text-center">Pasopati Project didedikasikan untuk mencapai salah satu tujuan Auriga, yakni mengeliminir aksi-aksi destruktif terhadap sumberdaya alam.</p>
+            <p class="text-center">Situs ini dikelola oleh Auriga. Namun demikian ekspose-ekspose tertentu dalam situs ini dilakukan bersama jejaring.</p>
+        </div>
+    </div>
+    <div class="bg-black py-6">
+        <div class="max-w-5xl mx-auto flex sm:flex-row flex-col justify-between items-center">
+            <div class=" text-white py-6">
+                <p>&copy; AURIGA NUSANTARA. ALL RIGHT RESERVED.</p>
+            </div>
+            <div class="flex space-x-4">
+                <a href="https://twitter.com/AURIGA_ID"><img loading="lazy" src="twitter.svg" alt="" class="h-4 "></a>
+                <a href="https://www.facebook.com/nusantaraauriga/"><img loading="lazy" src="facebook.svg" alt="" class="h-4"></a>
+                <a href="https://www.instagram.com/auriga_id/"><img loading="lazy" src="ig.png" alt="" class="h-4"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
