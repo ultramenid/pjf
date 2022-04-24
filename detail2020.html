@@ -103,11 +103,13 @@
         <img src="img/DJI_0823.jpeg" alt="" class="sm:mt-12 mt-0 h-100 w-full object-cover object-top" >
         <div class="flex sm:flex-row flex-col justify-between sm:space-x-10 space-x-0 px-4">
             <div class="sm:w-3/12 w-full flex flex-col mt-6">
-                <div  :class="(sidenav == 'ikhtisar') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'" @click="sidenav = 'ikhtisar' " >
-                    <a class="cursor-pointer  font-bold text-xl">Ikhtisar</a>
-                </div>
-                <div  :class="(sidenav == 'daftarliputan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'daftarliputan'">
-                    <a class="cursor-pointer  font-bold text-xl">Daftar Liputan</a>
+                <div class="sticky top-5">
+                    <div  :class="(sidenav == 'ikhtisar') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'" @click="sidenav = 'ikhtisar' " >
+                        <a class="cursor-pointer  font-bold text-xl">Ikhtisar</a>
+                    </div>
+                    <div  :class="(sidenav == 'daftarliputan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'daftarliputan'">
+                        <a class="cursor-pointer  font-bold text-xl">Daftar Liputan</a>
+                    </div>
                 </div>
             </div>
             <div class="sm:w-9/12 w-full mt-6 font-light">

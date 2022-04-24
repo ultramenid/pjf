@@ -103,20 +103,22 @@
         <img src="https://pasopati.id/uploads/artikel/1632649026_61503f423590b.jpeg" alt="" class="sm:mt-12 mt-0">
         <div class="flex sm:flex-row flex-col justify-between sm:space-x-10 space-x-0 px-4">
             <div class="sm:w-3/12 w-full flex flex-col mt-6">
-                <div  :class="(sidenav == 'latar') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'" @click="sidenav = 'latar' " >
-                    <a class="cursor-pointer  font-bold text-xl">Latar Belakang</a>
-                </div>
-                <div  :class="(sidenav == 'kepesertaan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'kepesertaan'">
-                    <a class="cursor-pointer  font-bold text-xl">Kepesertaan</a>
-                </div>
-                <div  :class="(sidenav == 'kegiatan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'kegiatan'">
-                    <a class="cursor-pointer  font-bold text-xl">Kegiatan</a>
-                </div>
-                <div  :class="(sidenav == 'hibahliputan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'hibahliputan'">
-                    <a class="cursor-pointer  font-bold text-xl">Hibah Liputan</a>
-                </div>
-                <div  :class="(sidenav == 'mentor') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'mentor'">
-                    <a class="cursor-pointer  font-bold text-xl">Mentor</a>
+                <div class="sticky top-5">
+                    <div  :class="(sidenav == 'latar') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'" @click="sidenav = 'latar' " >
+                        <a class="cursor-pointer  font-bold text-xl">Latar Belakang</a>
+                    </div>
+                    <div  :class="(sidenav == 'kepesertaan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'kepesertaan'">
+                        <a class="cursor-pointer  font-bold text-xl">Kepesertaan</a>
+                    </div>
+                    <div  :class="(sidenav == 'kegiatan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'kegiatan'">
+                        <a class="cursor-pointer  font-bold text-xl">Kegiatan</a>
+                    </div>
+                    <div  :class="(sidenav == 'hibahliputan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'hibahliputan'">
+                        <a class="cursor-pointer  font-bold text-xl">Hibah Liputan</a>
+                    </div>
+                    <div  :class="(sidenav == 'mentor') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'mentor'">
+                        <a class="cursor-pointer  font-bold text-xl">Mentor</a>
+                    </div>
                 </div>
             </div>
             <div class="sm:w-9/12 w-full mt-6 font-light">

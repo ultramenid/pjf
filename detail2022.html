@@ -101,22 +101,24 @@
 
     <div class="max-w-5xl mx-auto" x-data="{sidenav:'latar'}">
         <img src="img/belasatwa.jpeg" alt="" class="sm:mt-12 mt-0">
-        <div class="flex sm:flex-row flex-col justify-between sm:space-x-10 space-x-0 px-4">
+        <div class="flex sm:flex-row flex-col justify-between sm:space-x-10 space-x-0 px-4 ">
             <div class="sm:w-3/12 w-full flex flex-col mt-6">
-                <div  :class="(sidenav == 'latar') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'" @click="sidenav = 'latar' " >
-                    <a class="cursor-pointer  font-bold text-xl">Latar Belakang</a>
-                </div>
-                <div  :class="(sidenav == 'kepesertaan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'kepesertaan'">
-                    <a class="cursor-pointer  font-bold text-xl">Kepesertaan</a>
-                </div>
-                <div  :class="(sidenav == 'kegiatan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'kegiatan'">
-                    <a class="cursor-pointer  font-bold text-xl">Kegiatan</a>
-                </div>
-                <div  :class="(sidenav == 'hibahliputan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'hibahliputan'">
-                    <a class="cursor-pointer  font-bold text-xl">Hibah Liputan</a>
-                </div>
-                <div  :class="(sidenav == 'mentor') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'mentor'">
-                    <a class="cursor-pointer  font-bold text-xl">Mentor</a>
+                <div class="sticky top-5 ">
+                    <div  :class="(sidenav == 'latar') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'" @click="sidenav = 'latar' " >
+                        <a class="cursor-pointer  font-bold text-xl">Latar Belakang</a>
+                    </div>
+                    <div  :class="(sidenav == 'kepesertaan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'kepesertaan'">
+                        <a class="cursor-pointer  font-bold text-xl">Kepesertaan</a>
+                    </div>
+                    <div  :class="(sidenav == 'kegiatan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'kegiatan'">
+                        <a class="cursor-pointer  font-bold text-xl">Kegiatan</a>
+                    </div>
+                    <div  :class="(sidenav == 'hibahliputan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'hibahliputan'">
+                        <a class="cursor-pointer  font-bold text-xl">Hibah Liputan</a>
+                    </div>
+                    <div  :class="(sidenav == 'mentor') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'mentor'">
+                        <a class="cursor-pointer  font-bold text-xl">Mentor</a>
+                    </div>
                 </div>
             </div>
             <div class="sm:w-9/12 w-full mt-6 font-light">
@@ -258,7 +260,7 @@
                     
                     <!-- kangye -->
                     <div>
-                        <div class="float-left rounded-full border-l-8 border-r-8 border-l-pink-500 border-r-red-500 w-2/12 rotate-12 mr-4">
+                        <div class="float-left rounded-full sm:border-l-8 border-l-2 sm:border-r-8 border-r-2 border-l-pink-500 border-r-red-500 w-2/12 rotate-12 mr-4">
                             <img src="img/kangy.png" alt="" class="rounded-full -rotate-6">
                         </div>
                         <p class="font-bold">Yosep Suprayogi</p>
@@ -268,7 +270,7 @@
 
                     <!-- kanges -->
                     <div class="mt-12">
-                        <div class="float-left rounded-full border-l-8 border-r-8 border-yellow-500 border-r-orange-500 w-2/12 rotate-12 mr-4">
+                        <div class="float-left rounded-full sm:border-l-8 border-l-2 sm:border-r-8 border-r-2 border-yellow-500 border-r-orange-500 w-2/12 rotate-12 mr-4">
                             <img src="img/ks.png" alt="" class="rounded-full -rotate-6">
                         </div>
                         <p class="font-bold">Sandy Indra Pratama</p>
@@ -278,7 +280,7 @@
 
                     <!-- aqwam -->
                     <div class="mt-12">
-                        <div class="float-left rounded-full border-l-8 border-r-8 border-green-500 border-r-red-500 w-2/12 rotate-12 mr-4">
+                        <div class="float-left rounded-full sm:border-l-8 border-l-2 sm:border-r-8 border-r-2 border-green-500 border-r-red-500 w-2/12 rotate-12 mr-4">
                             <img src="img/aqwam.png" alt="" class="rounded-full -rotate-6">
                         </div>
                         <p class="font-bold">Aqwam F. Hanifan</p>
