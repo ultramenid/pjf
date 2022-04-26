@@ -99,43 +99,25 @@
         </div>
     </div>
 
-    <div class="max-w-5xl mx-auto" x-data="{sidenav:'latar'}">
+    <div class="max-w-5xl mx-auto" x-data="{sidenav:'ikhtisar'}">
         <img src="img/pjf-papua-min.jpeg" alt="" class="sm:mt-12 mt-0">
         <div class="flex sm:flex-row flex-col justify-between sm:space-x-10 space-x-0 px-4">
             <div class="sm:w-3/12 w-full flex flex-col mt-6">
                 <div class="sticky top-5">
-                    <div  :class="(sidenav == 'latar') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'" @click="sidenav = 'latar' " >
-                        <a class="cursor-pointer  font-bold text-xl">Latar Belakang</a>
+                    <div  :class="(sidenav == 'ikhtisar') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'" @click="sidenav = 'ikhtisar' " >
+                        <a class="cursor-pointer  font-bold text-xl">Ikhtisar</a>
                     </div>
-                    <div  :class="(sidenav == 'kepesertaan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'kepesertaan'">
+                    <div  :class="(sidenav == 'daftarliputan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'daftarliputan'">
                         <a class="cursor-pointer  font-bold text-xl">Kepesertaan</a>
-                    </div>
-                    <div  :class="(sidenav == 'kegiatan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'kegiatan'">
-                        <a class="cursor-pointer  font-bold text-xl">Kegiatan</a>
-                    </div>
-                    <div  :class="(sidenav == 'hibahliputan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'hibahliputan'">
-                        <a class="cursor-pointer  font-bold text-xl">Hibah Liputan</a>
-                    </div>
-                    <div  :class="(sidenav == 'mentor') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'mentor'">
-                        <a class="cursor-pointer  font-bold text-xl">Mentor</a>
                     </div>
                 </div>
             </div>
             <div class="sm:w-9/12 w-full mt-6 font-light">
-                <div x-show="sidenav==='latar'">
-                    Latar
+                <div x-show="sidenav==='ikhtisar'">
+                    ikhtisar
                 </div>
-                <div x-show="sidenav==='kepesertaan'">
-                   kepesertaan
-                </div>
-                <div x-show="sidenav==='kegiatan'">
-                    kegiatan
-                </div>
-                <div x-show="sidenav==='hibahliputan'">
-                    hiba liputan 
-                </div>
-                <div x-show="sidenav==='mentor'">
-                   Mentor
+                <div x-show="sidenav==='daftarliputan'">
+                   -
                 </div>
             </div>
         </div>
