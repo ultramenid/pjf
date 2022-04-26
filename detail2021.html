@@ -15,7 +15,7 @@
     <header class="shadow">
         <div class="flex justify-between items-center  max-w-5xl mx-auto " >
             <a href="index.html">
-                <img src="fellowlogo.jpeg" alt="pasopati project" class="sm:h-16 h-4 px-4">
+                <img src="img/fellowlogo.jpeg" alt="pasopati project" class="sm:h-16 h-4 px-4">
             </a>
             <div class="flex justify-between items-center space-x-4 ">
                 <div class="sm:flex hidden relative items-center border border-gray-400 ">
@@ -100,43 +100,52 @@
         </div>
     </div>
 
-    <div class="max-w-5xl mx-auto" x-data="{sidenav:'latar'}">
-        <img src="https://pasopati.id/uploads/artikel/1632649026_61503f423590b.jpeg" alt="" class="sm:mt-12 mt-0">
+    <div class="max-w-5xl mx-auto" x-data="{sidenav:'ikhtisar'}">
+        <img src="img/pjf-psn.jpg" alt="" class="sm:mt-12 mt-0">
         <div class="flex sm:flex-row flex-col justify-between sm:space-x-10 space-x-0 px-4">
             <div class="sm:w-3/12 w-full flex flex-col mt-6">
                 <div class="sticky top-5">
-                    <div  :class="(sidenav == 'latar') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'" @click="sidenav = 'latar' " >
-                        <a class="cursor-pointer  font-bold text-xl">Latar Belakang</a>
+                    <div  :class="(sidenav == 'ikhtisar') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'" @click="sidenav = 'ikhtisar' " >
+                        <a class="cursor-pointer  font-bold text-xl">Ikhtisar</a>
                     </div>
-                    <div  :class="(sidenav == 'kepesertaan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'kepesertaan'">
-                        <a class="cursor-pointer  font-bold text-xl">Kepesertaan</a>
-                    </div>
-                    <div  :class="(sidenav == 'kegiatan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'kegiatan'">
-                        <a class="cursor-pointer  font-bold text-xl">Kegiatan</a>
-                    </div>
-                    <div  :class="(sidenav == 'hibahliputan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'hibahliputan'">
-                        <a class="cursor-pointer  font-bold text-xl">Hibah Liputan</a>
-                    </div>
-                    <div  :class="(sidenav == 'mentor') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'mentor'">
-                        <a class="cursor-pointer  font-bold text-xl">Mentor</a>
+                    <div  :class="(sidenav == 'daftarliputan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'daftarliputan'">
+                        <a class="cursor-pointer  font-bold text-xl">Daftar Liputan</a>
                     </div>
                 </div>
             </div>
             <div class="sm:w-9/12 w-full mt-6 font-light">
-                <div x-show="sidenav==='latar'">
-                    Latar
+                <div x-show="sidenav==='ikhtisar'">
+                    <p>
+                        Pemerintah menepis tudingan <a href="https://www.walhi.or.id/darurat-ekologis" class="text-pasopati-red">banjir bandang yang menerjang 11 kabupaten di Kalimantan Selatan </a> pada awal 2021 lalu sebagai akibat aktivitas pertambangan. Namun, fakta memperlihatkan lain. Tutupan lahan di Kalimantan Selatan, yang sejatinya penting untuk mencegah banjir, sudah hancur akibat aktivitas tambang batubara, perkebunan sawit, perkebunan kayu, Hak Pengusahaan Hutan, dan aktivitas pembalakan liar. Hasil analisis Auriga dari data yang dikeluarkan KLHK pada 2020 menunjukkan dari 3,62 juta hektare lahan di provinsi tersebut, hanya 22% hutan alam tersisa atau sebesar 786.263,9 hektare. Itu pun sebagian besarnya sudah menjadi konsesi. Seluas 167.983 hektare untuk HPH, 525.682 hektare buat HTI, 577.830 hektare izin tambang, dan 667.638 hektare untuk sawit HGU.
+                    </p>
+                    <p class="mt-4">
+                        Banjir hanya satu dampak kerusakan lingkungan yang terjadi akibat aktivitas pertambangan. Kerusakan lain seperti kebakaran hutan, pencemaran udara, dan pencemaran air juga membawa dampak bagi warga sekitarnya. Untuk masa yang akan datang, dampak buruk ini berpotensi membesar. Terlebih dengan ada kebijakan pengeluaran limbah limbah batu bara jenis Fly Ash Bottom Ash (FABA) hasil aktivitas Pembangkit Listrik Tenaga Uap (PLTU) dan limbah penyulingan sawit (Spent Bleaching Earth/SPE) dari kategori limbah bahan berbahaya dan beracun (B3). Kebijakan ini menunjukkan pemerintah seolah-olah abai akan dampak kerusakan dan kerugian yang diakibatkan oleh aktivitas perusahan tambang.
+                    </p>
+                    <p class="mt-4">
+                        Selain kerusakan dan pencemaran lingkungan, banyak perusahaan juga belum melakukan reklamasi pasca tambang. Berdasarkan data <a href="https://geoportal.menlhk.go.id/webgis/index.php/en/map/interactive-map" class="text-pasopati-red"> KLHK </a> pada 2020 ada seluas 837.332 hektare lubang tambang yang dihasilkan dari aktivitas pertambangan di Indonesia. Sebesar 101.654 diantaranya terdapat di Kalimantan Selatan. Dari angka tersebut, 31% berada diluar  <a href="https://momi.minerba.esdm.go.id/public/" class="text-pasopati-red">izin pertambangan</a>. Hal ini disebabkan lemahnya regulasi yang mengatur sanksi mengenai jaminan reklamasi. Sanksi untuk perusahaan pelanggar jaminan regulasi hanya bersifat sanksi administrasi berupa peringatan, penghentian sementara kegiatan, hingga pencabutan izin.
+                    </p>
+                    <p class="mt-4">
+                        Alih-alih kelemahan ini diperbaik, UU Cipta Kerja atau Omnibus Law justru makin <a href="https://www.mongabay.co.id/2020/10/24/mengapa-omnibus-law-untungkan-pebisnis-batubara-dan-potensi-hambat-energi-terbarukan/" class="text-pasopati-red">melonggarkan sanksi bagi perusahaan pertambangan</a>. Beberapa pasal mengatur jor-joran pemerintah dalam pemberian insentif perusahaan batu bara. Mulai dari pemberian royalti 0 persen dan kemudahan operasional tanpa memperhatikan AMDAL bagi perusahaan. Di sisi lain, pasal Omnibus Law yang lainnya justru terlihat tegas pada pihak yang berusaha menghalang-halangi operasional perusahaan tambang. Pemerintah berharap dengan berbagai kemudahan dan kelonggaran tersebut investasi bisa digenjot.
+                    </p>
+                    <img src="https://i.ibb.co/V2fFkWQ/DCIM-100-MEDIA-DJI-0100-JPG.jpg" alt="" class="w-full mt-4">
+                    <p class="mt-4">
+                        Investasi memang memiliki kontribusi penting dalam perekonomian. Seperti halnya government spending, investasi dianggap akan memberikan trickle down effect bagi perekonomian, sehingga aktivitas lain akan berjalan. Namun, investasi tanpa adanya safe guards atau regulasi yang melindungi lingkungan hidup dan memperhitungkan dampak lingkungan, akan menjadi eksploitasi. Risiko lingkungan kian besar karena investasi di Indonesia masih bergantung pada Penanaman Modal Asing (PMA), khususnya pada proyek – proyek strategis nasional (PSN).
+                    </p>
+                    <p class="mt-4">
+                        Pengalaman <a class="text-pasopati-red" href="https://auriga.or.id/">Auriga Nusantara</a> dalam lima tahun terakhir menunjukan, menjaga sumber daya alam ternyata bukan kerja soliter. Pekerjaan ini tidak dapat dilakukan sendirian, mengingat bentang wilayah yang lebar dan beragamnya karakteristik permasalahan. Kolaborasi pun menjadi kata kunci. Oleh karena itulah Auriga berupaya berkoalisi, termasuk dengan media massa, melalui <a class="text-pasopati-red" href="https://tempo-institute.org/program-khusus/investigasi-bersama-tempo/">Investigasi Bersama Tempo</a> sejak 2016, <a class="text-pasopati-red" href="https://www.indonesialeaks.id/index.html#about-us">IndonesiaLeaks</a> sejak 2018, dan lain sebagainya.
+                    </p>
+                    <p class="mt-4">
+                        Dengan alasan itu pula, <a class="text-pasopati-red" href="#">pada 2020 </a>Auriga menggagas inisiatif bernama Pasopati Journalism Fellowship (PJF). Program ini sekaligus menjadi pilot project untuk memasukkan aspek keberlanjutan inisiatif pemantauan. PJF merupakan rangkaian kegiatan fellowship yang memiliki tiga tujuan utama. Pertama, meningkatkan kapasitas jurnalis dalam mendorong liputan berkualitas. Kedua, mendorong kehadiran kerjasama kolaboratif yang mempertemukan peran mass communication sebuah media dan fungsi information provider plus knowledge organisasi masyarakat sipil (civil society organisation - CSO). Ketiga, memperkuat impak liputan media demi menghadirkan pembaharuan kebijakan pengelolaan sumberdaya alam.   
+                    </p>
+                    <p class="mt-4">
+                        Tahun ini, PJF memasuki warsa kedua. PJF 2 ini akan menyorot Proyek Strategis Nasional pada Energi Terbarukan, Pembangkit Listrik Tenaga Uap (PLTU), Smelter, dan investasi di sektor pertambangan yang terdampak dari kebijakan baru salah satunya Omnibus Law.
+                    </p>
+                    <p class="mt-4">
+                        Program ini terbuka bagi seluruh jurnalis aktif di Indonesia. Pasopati berlaku untuk semua kategori jurnalis. Ketentuan tambahan lain dari daftarliputan program PJF adalah:
+                    </p>
                 </div>
-                <div x-show="sidenav==='kepesertaan'">
-                   kepesertaan
-                </div>
-                <div x-show="sidenav==='kegiatan'">
-                    kegiatan
-                </div>
-                <div x-show="sidenav==='hibahliputan'">
-                    hiba liputan 
-                </div>
-                <div x-show="sidenav==='mentor'">
-                   Mentor
+                <div x-show="sidenav==='daftarliputan'">
+                  -
                 </div>
             </div>
         </div>
@@ -145,7 +154,7 @@
 
 
      <!-- footer -->
-     <div class="bg-gray-100 flex flex-col items-center justify-center py-10 mt-12">
+    <div class="bg-gray-100 flex flex-col items-center justify-center py-10 mt-12">
         <div class="max-w-3xl mx-auto flex flex-col space-y-4 font-light px-4">
             <p class="text-center">Pasopati Project dirancang sebagai sebuah situs yang menampilkan informasi, data, dan analisis isu-isu kehutanan, persawitan, dan pertambangan. Situs ini fokus menyampaikan suara kritis pada tema-tema tersebut di atas, termasuk mengenai pelakunya dan kebijakan-kebijakan terkait.</p>
             <p class="text-center">Pasopati Project didedikasikan untuk mencapai salah satu tujuan Auriga, yakni mengeliminir aksi-aksi destruktif terhadap sumberdaya alam.</p>
@@ -158,9 +167,9 @@
                 <p>&copy; AURIGA NUSANTARA. ALL RIGHT RESERVED.</p>
             </div>
             <div class="flex space-x-4">
-                <a href="https://twitter.com/AURIGA_ID"><img loading="lazy" src="twitter.svg" alt="" class="h-4 "></a>
-                <a href="https://www.facebook.com/nusantaraauriga/"><img loading="lazy" src="facebook.svg" alt="" class="h-4"></a>
-                <a href="https://www.instagram.com/auriga_id/"><img loading="lazy" src="ig.png" alt="" class="h-4"></a>
+                <a href="https://twitter.com/AURIGA_ID"><img loading="lazy" src="img/twitter.svg" alt="" class="h-4 "></a>
+                <a href="https://www.facebook.com/nusantaraauriga/"><img loading="lazy" src="img/facebook.svg" alt="" class="h-4"></a>
+                <a href="https://www.instagram.com/auriga_id/"><img loading="lazy" src="img/ig.png" alt="" class="h-4"></a>
             </div>
         </div>
     </div>
