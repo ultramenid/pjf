@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
-<body x-data="{nav:false}" class="font-sans">
+<body x-data="{nav:false}" class="font-sans leading-relaxed">
     <!-- header -->
     <header class="shadow">
         <div class="flex justify-between items-center  max-w-5xl mx-auto " >
@@ -131,7 +131,7 @@
             <div class="sm:w-9/12 w-full mt-6 font-light">
                 <div x-show="sidenav==='latar'">
                     <p>
-                        Kejahatan satwa (wildlife crime), seperti perburuan, pemeliharaan, perdagangan, penyelundupan hingga pembunuhan, masih merupakan isu pinggiran di publik Indonesia. Terlihat, misalnya, media-media belum banyak memberi ruang pemberitaannya.
+                        Kejahatan satwa (<i>wildlife crime</i>), seperti perburuan, pemeliharaan, perdagangan, penyelundupan hingga pembunuhan, masih merupakan isu pinggiran di publik Indonesia. Terlihat, misalnya, media-media belum banyak memberi ruang pemberitaannya.
                     </p>
                     <p class="mt-4">
                         Padahal, <a href="https://scentsindonesia.com/wp-content/uploads/2020/07/CN71_Adhiasto_et_al_2020_Removal_of_Javan_leopard_from_the_wild-1.pdf" class="text-pasopati-red">kejahatan satwa berkontribusi signifikan terhadap keterancaman eksistensi satwa liar</a>, termasuk di Indonesia. Secara global, besaran ekonomi kejahatan satwa bahkan mengimbangi <a href="https://cites.org/eng/news/sg/2013/20130926_wildlife_crime.php" class="text-pasopati-red">perdagangan narkoba, senjata, dan penyelundupan manusia</a>. Asia Tenggara, di mana Indonesia sebagai negara terluas dan pemilik keragaman hayati terbanyak, bahkan kini dipandang sebagai <a href="https://www.unodc.org/documents/southeastasiaandpacific/Publications/2019/SEA_TOCTA_2019_web.pdf" class="text-pasopati-red"></a>pasar terbesar satwa liar ilegal di dunia. 
@@ -252,33 +252,41 @@
                 <div x-show="sidenav==='mentor'">
                     
                     <!-- kangye -->
-                    <div>
-                        <div class="float-left rounded-full sm:border-l-8 border-l-2 sm:border-r-8 border-r-2 border-l-pink-500 border-r-red-500 w-2/12 rotate-12 mr-4">
-                            <img src="img/kangy.png" alt="" class="rounded-full -rotate-6">
+                    <div class="flex justify-between space-x-6">
+                        <div class=" rounded-full w-2/12">
+                            <img src="img/kangy.png" alt="" class="rounded-full ">
                         </div>
-                        <p class="font-bold">Yosep Suprayogi</p>
-                        <p class="mt-2">Wartawan senior dari TEMPO yang sudah malang melintang dalam dunia jurnalisme investigasi. Ia juga aktif sebagai pengajar jurnalistik, infografis yang dikemas secara menarik dan komprehensif di Tempo Institute.</p>
-                        <p class="mt-4">Saat ini Yosep menjabat sebagai Kepala Teras.id. Ia pernah menjadi Redaktur Pelaksana Desk Investigasi TEMPO dan berhasil meraih tiga penghargaan pada tahun 2009. Dua di antaranya Investigasi “Akal-akalan Biaya Admin Listrik” menang di Anugerah Mochtar Lubis Award, dan “Lambang dalam Pusaran Mafia Purbakala” memenangi Anugerah Adiwarta Sampoerna.</p>
+                        <div class="w-10/12">
+                            <p class="font-bold">Yosep Suprayogi</p>
+                            <p class="mt-2">Wartawan senior dari TEMPO yang sudah malang melintang dalam dunia jurnalisme investigasi. Ia juga aktif sebagai pengajar jurnalistik, infografis yang dikemas secara menarik dan komprehensif di Tempo Institute.</p>
+                            <p class="mt-4">Saat ini Yosep menjabat sebagai Kepala Teras.id. Ia pernah menjadi Redaktur Pelaksana Desk Investigasi TEMPO dan berhasil meraih tiga penghargaan pada tahun 2009. Dua di antaranya Investigasi “Akal-akalan Biaya Admin Listrik” menang di Anugerah Mochtar Lubis Award, dan “Lambang dalam Pusaran Mafia Purbakala” memenangi Anugerah Adiwarta Sampoerna.</p>
+                        </div>
+                        
                     </div>
 
                     <!-- kanges -->
-                    <div class="mt-12">
-                        <div class="float-left rounded-full sm:border-l-8 border-l-2 sm:border-r-8 border-r-2 border-yellow-500 border-r-orange-500 w-2/12 rotate-12 mr-4">
+                    <div class="mt-12 flex justify-between space-x-6">
+                        <div class="rounded-full w-2/12">
                             <img src="img/ks.png" alt="" class="rounded-full -rotate-6">
                         </div>
-                        <p class="font-bold">Sandy Indra Pratama</p>
-                        <p class="mt-2">Merupakan seorang wartawan senior yang aktif melakukan liputan investigatif. Sepanjang karirnya, Sandy pernah bekerja di Republika, Majalah TEMPO, CNNIndonesia.com, Beritagar.id, dan memimpin redaksi HukumOnline.</p>
-                        <p class="mt-4">Saat ini Sandy merupakan pemimpin redaksi di Betahita.id, salah satu portal berita yang fokus pada isu lingkungan di Indonesia. Selain itu, ia juga berprofesi sebagai dosen jurnalistik di Universitas Multimedia Nusantara, Universitas Telkom, dan Stikom Bandung.</p>
+                        <div class="w-10/12">
+                            <p class="font-bold">Sandy Indra Pratama</p>
+                            <p class="mt-2">Merupakan seorang wartawan senior yang aktif melakukan liputan investigatif. Sepanjang karirnya, Sandy pernah bekerja di Republika, Majalah TEMPO, CNNIndonesia.com, Beritagar.id, dan memimpin redaksi HukumOnline.</p>
+                            <p class="mt-4">Saat ini Sandy merupakan pemimpin redaksi di Betahita.id, salah satu portal berita yang fokus pada isu lingkungan di Indonesia. Selain itu, ia juga berprofesi sebagai dosen jurnalistik di Universitas Multimedia Nusantara, Universitas Telkom, dan Stikom Bandung.</p>
+                        </div>
+                        
                     </div>
 
                     <!-- aqwam -->
-                    <div class="mt-12">
-                        <div class="float-left rounded-full sm:border-l-8 border-l-2 sm:border-r-8 border-r-2 border-green-500 border-r-red-500 w-2/12 rotate-12 mr-4">
+                    <div class="mt-12 flex justify-between space-x-6">
+                        <div class="rounded-full w-2/12">
                             <img src="img/aqwam.png" alt="" class="rounded-full -rotate-6">
                         </div>
-                        <p class="font-bold">Aqwam F. Hanifan</p>
-                        <p class="mt-2">Mengawali karirnya sebagai jurnalis di Tirto.id, sepak terjangnya dalam melahirkan karya jurnalistik investigasi tak perlu diragukan lagi.</p>
-                        <p class="mt-4">Saat ini, ia menjabat sebagai Produser program investigasi di Narasi Newsroom, dan aktif sebagai peneliti OSINT (Open Source Intelligence).</p>
+                        <div class="w-10/12">
+                            <p class="font-bold">Aqwam F. Hanifan</p>
+                            <p class="mt-2">Mengawali karirnya sebagai jurnalis di Tirto.id, sepak terjangnya dalam melahirkan karya jurnalistik investigasi tak perlu diragukan lagi.</p>
+                            <p class="mt-4">Saat ini, ia menjabat sebagai Produser program investigasi di Narasi Newsroom, dan aktif sebagai peneliti OSINT (Open Source Intelligence).</p>
+                        </div>
                     </div>
                 </div>
             </div>
