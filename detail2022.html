@@ -65,6 +65,9 @@
             <div class="mt-20 space-y-3 block">
                 <div class=" px-6" >
                     <div class="flex items-center   px-4 mb-1" >
+                        <a class=" text-base leading-5 text-white font-semibold uppercase">HOME </a>
+                    </div>
+                    <div class="flex items-center   px-4 mb-1" >
                         <a class=" text-base leading-5 text-white font-semibold uppercase">EXPOSE </a>
                     </div>
                     <div class=" px-4 py-3 mb-4  rounded" >
@@ -83,7 +86,10 @@
                     </div>
                     <div class=" px-4 py-3 mb-4  rounded" >
                         <ul class="list-disc flex flex-col space-y-2 list-inside">
-                            <li class="text-pasopati-red"><a href="#" class="text-sm mr-6 text-white">PJF2020</a></li>
+                            <li class="text-pasopati-red"><a href="#" class="text-sm mr-6 text-white">2020 - 2021</a></li>
+                            <li class="text-pasopati-red"><a href="#" class="text-sm mr-6 text-white">2021</a></li>
+                            <li class="text-pasopati-red"><a href="#" class="text-sm mr-6 text-white">2022</a></li>
+                    
                         </ul>
                     </div>
                     <p class="border-b border-gray-300"></p>
@@ -128,6 +134,9 @@
                     <div  :class="(sidenav == 'mentor') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'mentor'">
                         <a class="cursor-pointer  font-bold text-xl">Mentor</a>
                     </div>
+                    <div  :class="(sidenav == 'daftarliputan') ? 'py-1 text-white bg-pasopati-red px-4' :'py-1 text-pasopati-red px-4'"  @click="sidenav = 'daftarliputan'">
+                        <a class="cursor-pointer  font-bold text-xl">Daftar Liputan</a>
+                    </div>
                 </div>
             </div>
             <div class="sm:w-9/12 w-full mt-6 font-light">
@@ -136,10 +145,10 @@
                         Kejahatan satwa (<i>wildlife crime</i>), seperti perburuan, pemeliharaan, perdagangan, penyelundupan hingga pembunuhan, masih merupakan isu pinggiran di publik Indonesia. Terlihat, misalnya, media-media belum banyak memberi ruang pemberitaannya.
                     </p>
                     <p class="mt-4">
-                        Padahal, <a href="https://scentsindonesia.com/wp-content/uploads/2020/07/CN71_Adhiasto_et_al_2020_Removal_of_Javan_leopard_from_the_wild-1.pdf" class="text-pasopati-red">kejahatan satwa berkontribusi signifikan terhadap keterancaman eksistensi satwa liar</a>, termasuk di Indonesia. Secara global, besaran ekonomi kejahatan satwa bahkan mengimbangi <a href="https://cites.org/eng/news/sg/2013/20130926_wildlife_crime.php" class="text-pasopati-red">perdagangan narkoba, senjata, dan penyelundupan manusia</a>. Asia Tenggara, di mana Indonesia sebagai negara terluas dan pemilik keragaman hayati terbanyak, bahkan kini dipandang sebagai <a href="https://www.unodc.org/documents/southeastasiaandpacific/Publications/2019/SEA_TOCTA_2019_web.pdf" class="text-pasopati-red"></a>pasar terbesar satwa liar ilegal di dunia. 
+                        Padahal, <a href="https://scentsindonesia.com/wp-content/uploads/2020/07/CN71_Adhiasto_et_al_2020_Removal_of_Javan_leopard_from_the_wild-1.pdf" class="text-pasopati-red">kejahatan satwa berkontribusi signifikan terhadap keterancaman eksistensi satwa liar</a>, termasuk di Indonesia. Secara global, besaran ekonomi kejahatan satwa bahkan mengimbangi <a href="https://cites.org/eng/news/sg/2013/20130926_wildlife_crime.php" class="text-pasopati-red">perdagangan narkoba, senjata, dan penyelundupan manusia</a>. Asia Tenggara, di mana Indonesia sebagai negara terluas dan pemilik keragaman hayati terbanyak, bahkan kini dipandang sebagai <a href="https://www.unodc.org/documents/southeastasiaandpacific/Publications/2019/SEA_TOCTA_2019_web.pdf" class="text-pasopati-red">pasar terbesar satwa liar ilegal di dunia</a>. 
                     </p>
                     <p class="mt-4">
-                        Di Indonesia, perdagangan ilegal satwa dilindungi diperkirakan <a href="https://pdf.usaid.gov/pdf_docs/PA00XFFB.pdf" class="text-pasopati-red">mencapai Rp 13 triliun per tahun</a>. Indonesia sendiri dianggap merangkap produsen dan pasar global perdagangan ilegal satwa dilindugi. Fenomenanya terlihat dari banyaknya figur publik yang memelihara satwa liar eksotis, termasuk bersumber dari luar negeri. Hukum Indonesia sendiri masih relatif lemah melindungi satwa liar yang bersumber dari luar negeri, meski di negara asalnya satwa tersebut dilindungi.
+                        Di Indonesia, perdagangan ilegal satwa dilindungi diperkirakan <a href="https://pdf.usaid.gov/pdf_docs/PA00XFFB.pdf" class="text-pasopati-red">mencapai Rp 13 triliun per tahun</a>. Indonesia sendiri dianggap merangkap produsen dan pasar global perdagangan ilegal satwa dilindungi. Fenomenanya terlihat dari banyaknya figur publik yang memelihara satwa liar eksotis, termasuk bersumber dari luar negeri. Hukum Indonesia sendiri masih relatif lemah melindungi satwa liar yang bersumber dari luar negeri, meski di negara asalnya satwa tersebut dilindungi.
                     </p>
                     <p class="mt-4">
                         Maka, tak mengherankan bahwa kejahatan satwa liar yang terungkap selama ini hanyalah puncak gunung es yang tidak menampakkan dasarnya yang justru jauh lebih luas.
@@ -280,6 +289,73 @@
                             <p class="mt-2">Mengawali karir jurnalistiknya di Tirto.id. Banyak melahirkan liputan <i> in-depth</i> dan investigasi. Saat ini menjabat Produser Program Investigasi di Narasi Newsroom. Aqwam juga aktif sebagai peneliti OSINT (Open Source Intelligence).</p>
                             <!-- <p class="mt-4"></p> -->
                         </div>
+                    </div>
+                </div>
+                <div x-show="sidenav==='daftarliputan'">
+                    <div class=" flex flex-col  space-x-0 sm:flex-row sm:space-x-6">
+                        <div class="w-full sm:w-5/12 py-1">
+                          <img src="https://www.ekuatorial.com/wp-content/uploads/2022/07/Harimau_Sumatera-e1659068803673.jpeg" alt="" class="mb-4 sm:h-44 h-full w-full object-cover object-center" />
+                        </div>
+                      
+                        <div class="flex w-full flex-col space-y-1 sm:w-7/12 ">
+                            <a href="#"><h1 class="text-2xl font-extrabold">Tragedi harimau sumatera: Hidup dijagal, mati dijual (1)</h1></a>
+                            <p class="mt-1 font-light text-sm">Memperingati Hari Harimau Internasional, kami merilis tulisan hasil investigasi terhadap perburuan dan perdagangan harimau sumatera. Tulisan terdiri dari 4 bagian.
+                            </p>
+                            <a href="https://www.ekuatorial.com/2022/07/tragedi-harimau-sumatera-hidup-dijagal-mati-dijual-1/" class="text-pasopati-red">Ekuatorial</a>
+                        </div>
+                        
+                    </div>
+                    <div class=" flex flex-col  space-x-0 sm:flex-row sm:space-x-6">
+                        <div class="w-full sm:w-5/12 py-1">
+                          <img src="https://jaring.id/wp-content/uploads/2022/07/FOTO-1-2-1536x1024.jpg" alt="" class="mb-4 sm:h-44 h-full w-full object-cover object-center" />
+                        </div>
+                      
+                        <div class="flex w-full flex-col space-y-1 sm:w-7/12 ">
+                            <a href="#"><h1 class="text-2xl font-extrabold">Bisnis Cuan Berbalut Kepahlawananan</h1></a>
+                            <p class="mt-1 font-light text-sm">Harimau memang dianggap sebagai ancaman bagi penduduk, khususnya bagi mereka yang hendak berladang pada masa lampau. Namun, harimau bukan sekadar ancaman. Ada potensi cuan dari bertaruh nyawa berburu si Raja Rimba. 
+                            </p>
+                            <a href="https://jaring.id/bisnis-cuan-berbalut-kepahlawananan/" class="text-pasopati-red">Jaring.id</a>
+                        </div>
+                        
+                    </div>
+                    <div class=" flex flex-col  space-x-0 sm:flex-row sm:space-x-6">
+                        <div class="w-full sm:w-5/12 py-1">
+                          <img src="https://jaring.id/wp-content/uploads/2022/07/FOTO-1-1-1536x1024.jpg" alt="" class="mb-4 sm:h-44 h-full w-full object-cover object-center" />
+                        </div>
+                      
+                        <div class="flex w-full flex-col space-y-1 sm:w-7/12 ">
+                            <a href="#"><h1 class="text-2xl font-extrabold">Ambulans untuk Harimau Sumatera</h1></a>
+                            <p class="mt-1 font-light text-sm">Pusat dari bisnis kulit harimau dan segala jenis hewan langka di Sumatera, ada di pulau Batam. Pintu masuk utamanya adalah Pelabuhan Kuala Tungkal di Tanjung Jabung Barat, Jambi.  
+                            </p>
+                            <a href="https://jaring.id/ambulans-untuk-harimau-sumatera/" class="text-pasopati-red">Jaring.id</a>
+                        </div>
+                        
+                    </div>
+                    <div class=" flex flex-col  space-x-0 sm:flex-row sm:space-x-6">
+                        <div class="w-full sm:w-5/12 py-1">
+                          <img src="https://www.ekuatorial.com/wp-content/uploads/2022/07/14.jpg" alt="" class="mb-4 sm:h-44 h-full w-full object-cover object-center" />
+                        </div>
+                      
+                        <div class="flex w-full flex-col space-y-1 sm:w-7/12 ">
+                            <a href="#"><h1 class="text-2xl font-extrabold">Tragedi harimau sumatera: Hidup dijagal, mati dijual (2)</h1></a>
+                            <p class="mt-1 font-light text-sm">Harimau hasil buruan lebih aman dan tidak khawatir dicurigai jika dikirimkan menggunakan pedagang sayur keliling yang kerap keluar masuk desa pelosok, ambulans atau mobil box berpendingin untuk dikirim ke luar daerah.
+                            </p>
+                            <a href="https://www.ekuatorial.com/2022/08/tragedi-harimau-sumatera-hidup-dijagal-mati-dijual-2/" class="text-pasopati-red">Ekuatorial</a>
+                        </div>
+                        
+                    </div>
+                    <div class=" flex flex-col  space-x-0 sm:flex-row sm:space-x-6">
+                        <div class="w-full sm:w-5/12 py-1">
+                          <img src="https://cdn.betahita.id/5/8/9/0/5890_840x576.jpg" alt="" class="mb-4 sm:h-44 h-full w-full object-cover object-center" />
+                        </div>
+                      
+                        <div class="flex w-full flex-col space-y-1 sm:w-7/12 ">
+                            <a href="#"><h1 class="text-2xl font-extrabold">Para Tetamu Penggerus Rumah Raja Rimba Sumatra</h1></a>
+                            <p class="mt-1 font-light text-sm">Lebih dari 20 perusahaan menduduki rumah Harimau Sumatra. Hilangnya hutan yang kemudian beralih fungsi membuat hilang pula daya dukung terhadap Harimau Sumatra, berupa pakan atau tempat perlindungan mereka.
+                            </p>
+                            <a href="https://betahita.id/news/detail/7832/para-tetamu-penggerus-rumah-raja-rimba-sumatra.html.html" class="text-pasopati-red">Betahita</a>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
